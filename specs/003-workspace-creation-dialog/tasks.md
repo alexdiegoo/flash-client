@@ -21,11 +21,11 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 **Purpose**: Initialize Shadcn UI and add required components.
 
-- [ ] T001 Initialize Shadcn UI using `npx shadcn@latest init` (configured for Tailwind 4.x)
-- [ ] T002 Add Shadcn `dialog` component using `npx shadcn@latest add dialog`
-- [ ] T003 [P] Add Shadcn `input` component using `npx shadcn@latest add input`
-- [ ] T004 [P] Add Shadcn `button` component using `npx shadcn@latest add button`
-- [ ] T005 [P] Add Shadcn `label` component using `npx shadcn@latest add label`
+- [x] T001 Initialize Shadcn UI using `npx shadcn@latest init` (configured for Tailwind 4.x)
+- [x] T002 Add Shadcn `dialog` component using `npx shadcn@latest add dialog`
+- [x] T003 [P] Add Shadcn `input` component using `npx shadcn@latest add input`
+- [x] T004 [P] Add Shadcn `button` component using `npx shadcn@latest add button`
+- [x] T005 [P] Add Shadcn `label` component using `npx shadcn@latest add label`
 
 ---
 
@@ -33,7 +33,7 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 **Purpose**: Ensure types and core infrastructure are ready.
 
-- [ ] T006 [P] Verify and update `IElectronAPI` type in `src/renderer/types/electron.d.ts` for consistency
+- [x] T006 [P] Verify and update `IElectronAPI` type in `src/renderer/types/electron.d.ts` for consistency
 
 **Checkpoint**: Setup and Foundation ready - UI implementation can now begin.
 
@@ -47,8 +47,8 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T007 [US1] Create basic `WorkspaceCreationDialog` component using Shadcn `Dialog` primitives in `src/renderer/components/WorkspaceCreationDialog.tsx`
-- [ ] T008 [US1] Replace `window.prompt` logic in `src/renderer/pages/Home.tsx` with the new `WorkspaceCreationDialog` trigger
+- [x] T007 [US1] Create basic `WorkspaceCreationDialog` component using Shadcn `Dialog` primitives in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T008 [US1] Replace `window.prompt` logic in `src/renderer/pages/Home.tsx` with the new `WorkspaceCreationDialog` trigger
 
 **Checkpoint**: Dialog trigger is functional.
 
@@ -64,14 +64,14 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T009 [P] [US2] Unit test for `WorkspaceCreationDialog` form submission and validation in `src/tests/unit/WorkspaceCreationDialog.test.tsx`
-- [ ] T010 [P] [US2] E2E test for the complete workspace creation flow in `src/tests/e2e/workspace-creation.spec.ts`
+- [x] T009 [P] [US2] Unit test for `WorkspaceCreationDialog` form submission and validation in `src/tests/unit/WorkspaceCreationDialog.test.tsx`
+- [x] T010 [P] [US2] E2E test for the complete workspace creation flow in `src/tests/e2e/workspace-creation.spec.ts`
 
 ### Implementation for User Story 2
 
-- [ ] T011 [US2] Implement form state and "Name is required" validation in `src/renderer/components/WorkspaceCreationDialog.tsx`
-- [ ] T012 [US2] Implement `onCreate` call to `window.electronAPI.createWorkspace` in `src/renderer/components/WorkspaceCreationDialog.tsx`
-- [ ] T013 [US2] Ensure `src/renderer/pages/Home.tsx` correctly refreshes the workspace list upon successful creation callback
+- [x] T011 [US2] Implement form state and "Name is required" validation in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T012 [US2] Implement `onCreate` call to `window.electronAPI.createWorkspace` in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T013 [US2] Ensure `src/renderer/pages/Home.tsx` correctly refreshes the workspace list upon successful creation callback
 
 **Checkpoint**: Core creation flow is fully functional and tested.
 
@@ -85,7 +85,7 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T014 [US3] Add "Cancel" button and handle dialog close state in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T014 [US3] Add "Cancel" button and handle dialog close state in `src/renderer/components/WorkspaceCreationDialog.tsx`
 
 ---
 
@@ -93,9 +93,9 @@ description: "Task list for Workspace Creation Dialog implementation"
 
 **Purpose**: Final UI refinements and validation.
 
-- [ ] T015 [P] Add Lucide React icons (e.g., `Plus`, `X`) to the dialog in `src/renderer/components/WorkspaceCreationDialog.tsx`
-- [ ] T016 [P] Apply custom styling to the validation error message in `src/renderer/components/WorkspaceCreationDialog.tsx`
-- [ ] T017 Run `specs/003-workspace-creation-dialog/quickstart.md` validation scenarios
+- [x] T015 [P] Add Lucide React icons (e.g., `Plus`, `X`) to the dialog in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T016 [P] Apply custom styling to the validation error message in `src/renderer/components/WorkspaceCreationDialog.tsx`
+- [x] T017 Run `specs/003-workspace-creation-dialog/quickstart.md` validation scenarios
 
 ---
 

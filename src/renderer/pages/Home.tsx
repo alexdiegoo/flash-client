@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { WorkspaceList } from '../components/WorkspaceList';
 import { CreateWorkspaceButton } from '../components/CreateWorkspaceButton';
+import { WorkspaceCreationDialog } from '../components/WorkspaceCreationDialog';
 import { Workspace } from '../types/workspace';
 
 export function Home() {
@@ -26,17 +27,8 @@ export function Home() {
     await window.electronAPI.openWorkspace(id);
   };
 
-  const handleCreate = async () => {
-    const name = window.prompt('Enter workspace name:');
-    if (name && name.trim()) {
-      try {
-        await window.electronAPI.createWorkspace(name.trim());
-        await fetchWorkspaces();
-      } catch (error) {
-        console.error('Failed to create workspace:', error);
-        window.alert('Failed to create workspace');
-      }
-    }
+  const handleCreateSuccess = async () => {
+    await fetchWorkspaces();
   };
 
   if (loading) {
@@ -47,7 +39,9 @@ export function Home() {
     <div className="container mx-auto p-8">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Workspaces</h1>
-        <CreateWorkspaceButton onCreate={handleCreate} />
+        <WorkspaceCreationDialog onSuccess={handleCreateSuccess}>
+          <CreateWorkspaceButton />
+        </WorkspaceCreationDialog>
       </div>
       <WorkspaceList workspaces={workspaces} onOpen={handleOpen} />
     </div>
