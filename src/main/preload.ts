@@ -1,10 +1,7 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector: string, text: string) => {
-    const element = document.getElementById(selector)
-    if (element) element.innerText = text
-  }
+import { contextBridge, ipcRenderer } from 'electron';
 
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type] as string)
-  }
-})
+contextBridge.exposeInMainWorld('electronAPI', {
+  getWorkspaces: () => ipcRenderer.invoke('getWorkspaces'),
+  createWorkspace: (name: string) => ipcRenderer.invoke('createWorkspace', name),
+  openWorkspace: (id: string) => ipcRenderer.invoke('openWorkspace', id),
+});

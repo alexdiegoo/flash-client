@@ -1,9 +1,11 @@
 import React from 'react'
-import CenteredGreeting from './components/CenteredGreeting'
+import { Home } from './pages/Home'
 
 function App() {
   return (
-    <CenteredGreeting />
+    <div className="min-h-screen bg-background text-foreground font-sans antialiased">
+      <Home />
+    </div>
   )
 }
 
